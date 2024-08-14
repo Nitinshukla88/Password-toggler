@@ -1,15 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Password-toggle</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/ece7959ef3.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
     <div class="container">
-        <input type="password" placeholder="password">
-        <button>Click me</button>
+      <input type="password" placeholder="password" id="inp">
+      <span onclick="show()"> <i class=" toggle fa-solid fa-eye-slash fa-lg"></i></span>
+      <button>Click me</button>
     </div>
-</body>
+    <script>
+        let eyeEle = document.querySelector(".toggle");
+        let inpField = document.getElementById("inp");
+        function show(){
+            if(inpField.type == "password"){
+                inpField.type = "text";
+                eyeEle.classList.remove("fa-eye-slash");
+                eyeEle.classList.add("fa-eye");
+            }else{
+                inpField.type = "password";
+                eyeEle.classList.remove("fa-eye");
+                eyeEle.classList.add("fa-eye-slash");
+            }
+        }
+    </script>
+  </body>
 </html>

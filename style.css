@@ -22,14 +22,18 @@ body{
     justify-content: center;
 }
 
-input[type="password"]{
+input{
     width: 50%;
     height: 40px;
     padding: 8px 10px;
     margin: 8px;
     border-radius: 10px;
-    border: none;
     border: 1px solid purple;
+}
+
+input:focus{
+    outline: 0;
+    border: 1px solid orange;
 }
 
 button{
@@ -41,3 +45,12 @@ button{
     cursor: pointer;
 }
 
+span{
+    position: absolute;
+    left: 62%;
+}
+
+span:hover{
+    cursor: pointer;
+}
+ 
